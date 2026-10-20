@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$0 開公司 | 政府費用 100% 回贈 | 香港中小企一站式服務</title>
+    <meta name="description" content="香港開公司 $0 啟動，政府費用 100% 回贈。包會計核數、銀行開戶、社交媒體營運、小紅書推廣、CRM系統、網頁設計一站式服務。">
+    <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap">
+    <style>
+        /* ===== 重置與基礎 ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #2563EB;
+            --color-primary-light: #EFF6FF;
+            --color-accent: #FF6B4A;
+            --color-accent-light: #FFF7ED;
+            --color-success: #10B981;
+            --color-success-light: #F0FDF4;
+            --color-dark: #1E293B;
+            --color-gray: #64748B;
+            --color-gray-light: #F8FAFC;
+            --color-border: #E2E8F0;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+            --radius: 16px;
+            --radius-lg: 24px;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--color-dark);
+            line-height: 1.6;
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== Navbar ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-border);
+            z-index: 1000;
+            padding: 16px 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--color-dark);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--color-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-gray);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--color-accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #F05535;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background: white;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--color-primary-light);
+        }
+
+        .btn-lg {
+            padding: 16px 36px;
+            font-size: 17px;
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        .hero-blob-1 {
+            width: 400px;
+            height: 400px;
+            background: #BFDBFE;
+            top: -100px;
+            left: -100px;
+        }
+
+        .hero-blob-2 {
+            width: 350px;
+            height: 350px;
+            background: #A7F3D0;
+            top: 50px;
+            right: -80px;
+        }
+
+        .hero-blob-3 {
+            width: 250px;
+            height: 250px;
+            background: #FED7AA;
+            bottom: -50px;
+            left: 30%;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--color-success-light);
+            color: var(--color-success);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--color-success);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 88px);
+            font-weight: 900;
+            line-height: 1.1;
+            color: var(--color-dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 .zero {
+            color: var(--color-primary);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(20px, 3vw, 28px);
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+        }
+
+        .hero-desc {
+            font-size: 18px;
+            color: var(--color-gray);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== 賣點條 ===== */
+        .features-bar {
+            padding: 40px 0;
+            background: var(--color-gray-light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-icon.blue { background: var(--color-primary-light); color: var(--color-primary); }
+        .feature-icon.green { background: var(--color-success-light); color: var(--color-success); }
+        .feature-icon.orange { background: var(--color-accent-light); color: var(--color-accent); }
+        .feature-icon.purple { background: #F3E8FF; color: #9333EA; }
+
+        .feature-text h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--color-dark);
+        }
+
+        .feature-text p {
+            font-size: 13px;
+            color: var(--color-gray);
+        }
+
+        /* ===== 區塊通用 ===== */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-primary);
+            background: var(--color-primary-light);
+            padding: 6px 14px;
+            border-radius: 999px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 4vw, 44px);
+            font-weight: 900;
+            color: var(--color-dark);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .section-desc {
+            font-size: 17px;
+            color: var(--color-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== 服務卡片 ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: transparent;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: var(--color-gray);
+            line-height: 1.6;
+        }
+
+        /* ===== 流程 ===== */
+        .process-section {
+            background: var(--color-gray-light);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            color: white;
+            font-size: 20px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .process-step h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 8px;
+        }
+
+        .process-step p {
+            font-size: 14px;
+            color: var(--color-gray);
+        }
+
+        /* ===== 費用比較表 ===== */
+        .pricing-table {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+
+        .table-row {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .table-row:last-child {
+            border-bottom: none;
+        }
+
+        .table-cell {
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+
+        .table-header .table-cell {
+            font-weight: 700;
+            font-size: 16px;
+            background: var(--color-gray-light);
+        }
+
+        .table-cell.highlight {
+            background: var(--color-success-light);
+            color: var(--color-success);
+            font-weight: 700;
+        }
+
+        .table-header .table-cell.highlight {
+            background: var(--color-success);
+            color: white;
+            position: relative;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            margin-left: 8px;
+        }
+
+        .check-icon {
+            color: var(--color-success);
+            font-weight: 700;
+        }
+
+        .x-icon {
+            color: #CBD5E1;
+        }
+
+        /* ===== 套餐 ===== */
+        .plan-section {
+            background: linear-gradient(135deg, #FFF7ED 0%, #EFF6FF 100%);
+        }
+
+        .plan-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .plan-header {
+            background: var(--color-dark);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .plan-name {
+            font-size: 18px;
+            font-weight: 600;
+            opacity: 0.8;
+            margin-bottom: 8px;
+        }
+
+        .plan-price {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .plan-price small {
+            font-size: 20px;
+            font-weight: 500;
+            opacity: 0.7;
+        }
+
+        .plan-tagline {
+            margin-top: 12px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .plan-body {
+            padding: 40px;
+        }
+
+        .plan-list {
+            list-style: none;
+        }
+
+        .plan-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--color-border);
+            font-size: 16px;
+        }
+
+        .plan-list li:last-child {
+            border-bottom: none;
+        }
+
+        .plan-list .gift {
+            color: var(--color-accent);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .plan-list .value {
+            color: var(--color-gray);
+            font-size: 14px;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+
+        .plan-cta {
+            padding: 0 40px 40px;
+            text-align: center;
+        }
+
+        /* ===== 客戶見證 ===== */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 32px;
+        }
+
+        .testimonial-stars {
+            color: #FBBF24;
+            font-size: 18px;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            color: var(--color-dark);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--color-primary-light);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .author-info h4 {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .author-info p {
+            font-size: 13px;
+            color: var(--color-gray);
+        }
+
+        /* ===== FAQ ===== */
+        .faq-section {
+            background: var(--color-gray-light);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: var(--radius);
+            margin-bottom: 12px;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 16px;
+            user-select: none;
+        }
+
+        .faq-question .arrow {
+            transition: transform 0.3s;
+            color: var(--color-gray);
+        }
+
+        .faq-item.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-inner {
+            padding: 0 24px 20px;
+            color: var(--color-gray);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* ===== 底部 CTA ===== */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--color-primary) 0%, #1D4ED8 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-section .btn-primary {
+            background: white;
+            color: var(--color-primary);
+        }
+
+        .cta-section .btn-primary:hover {
+            background: #F0F9FF;
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            background: var(--color-dark);
+            color: #94A3B8;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .footer-desc {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #94A3B8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #334155;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* ===== 響應式 ===== */
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px 24px;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .table-row {
+                grid-template-columns: 1fr 1fr;
+            }
+            .table-cell:first-child {
+                grid-column: 1 / -1;
+                font-weight: 600;
+                background: var(--color-gray-light);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero {
+                padding: 120px 0 60px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            .plan-price {
+                font-size: 48px;
+            }
+            .plan-header, .plan-body, .plan-cta {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .table-row {
+                grid-template-columns: 1fr;
+            }
+            .table-cell:first-child {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">$0<span>開公司</span></a>
+            <ul class="nav-links">
+                <li><a href="#services">服務</a></li>
+                <li><a href="#process">流程</a></li>
+                <li><a href="#pricing">費用</a></li>
+                <li><a href="#plan">套餐</a></li>
+                <li><a href="#faq">常見問題</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">免費諮詢</a>
+        </div>
+    </nav>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+        <div class="hero-blob hero-blob-3"></div>
+        <div class="container">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                香港中小企首選開公司服務
+            </div>
+            <h1><span class="zero">$0</span> 開公司</h1>
+            <p class="hero-subtitle">政府費用 100% 回贈</p>
+            <p class="hero-desc">
+                由諮詢、註冊、銀行開戶到營運支援，一站式幫你搞掂所有開公司程序。
+                政府收費全數回贈，真正 $0 起步創業。
+            </p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary btn-lg">立即免費諮詢</a>
+                <a href="#pricing" class="btn btn-outline btn-lg">睇費用比較</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 賣點條 ===== -->
+    <section class="features-bar">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <div class="feature-text">
+                        <h4>$0 開公司</h4>
+                        <p>免啟動費用</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon green">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <div class="feature-text">
+                        <h4>政府費用全回贈</h4>
+                        <p>100% 現金回贈</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon orange">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                    </div>
+                    <div class="feature-text">
+                        <h4>一站式服務</h4>
+                        <p>由註冊到營運</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div class="feature-text">
+                        <h4>專業團隊</h4>
+                        <p>會計師及顧問駐場</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 服務介紹 ===== -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">我們的服務</span>
+                <h2 class="section-title">由開公司到做生意，全部搞掂</h2>
+                <p class="section-desc">7 大核心服務，覆蓋中小企由成立到成長嘅每一步</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon" style="background: var(--color-primary-light); color: var(--color-primary);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M9 13h1M9 17h1M14 9h1M14 13h1M14 17h1"/></svg>
+                    </div>
+                    <h3>中小企發展支援</h3>
+                    <p>申請政府資助、營銷策略、業務顧問，陪你由零開始成長</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="background: var(--color-success-light); color: var(--color-success);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>
+                    </div>
+                    <h3>會計核數</h3>
+                    <p>法定審計、報稅、財務報表，專業會計師團隊跟進</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="background: var(--color-accent-light); color: var(--color-accent);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                    </div>
+                    <h3>申請銀行帳戶</h3>
+                    <p>協助開設商業銀行戶口，提升開戶成功率</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="background: #F3E8FF; color: #9333EA;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
+                    </div>
+                    <h3>社交媒體營運</h3>
+                    <p>Facebook、IG 內容策劃與營運，建立品牌曝光</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="background: #FEE2E2; color: #DC2626;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h3>小紅書推廣</h3>
+                    <p>內地短視頻及小紅書營銷，接觸大灣區客源</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="background: #FEF3C7; color: #D97706;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>CRM 客戶管理系統</h3>
+                    <p>客戶資料管理、銷售跟進、數據分析一站式系統</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="background: #CFFAFE; color: #0891B2;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    </div>
+                    <h3>網頁設計</h3>
+                    <p>品牌網站、電商網站設計開發，專業團隊打造</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 開公司流程 ===== -->
+    <section class="section process-section" id="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">簡單 4 步</span>
+                <h2 class="section-title">開公司原來咁簡單</h2>
+                <p class="section-desc">由諮詢到銀行開戶，平均 7 個工作天搞掂</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>免費諮詢</h3>
+                    <p>了解你的業務需求，推薦最適合的公司架構</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>遞交文件</h3>
+                    <p>提供身份證明及公司資料，我們協助準備所有文件</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>公司註冊</h3>
+                    <p>向公司註冊處遞交申請，領取商業登記證</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>銀行開戶</h3>
+                    <p>協助預約銀行，提升開戶成功率</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 費用比較表 ===== -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">費用比較</span>
+                <h2 class="section-title">點解選擇我們？</h2>
+                <p class="section-desc">一目了然，政府費用 100% 回贈，真正 $0 開公司</p>
+            </div>
+            <div class="pricing-table">
+                <div class="table-row table-header">
+                    <div class="table-cell">費用項目</div>
+                    <div class="table-cell" style="justify-content: center;">自行辦理</div>
+                    <div class="table-cell" style="justify-content: center;">一般代理</div>
+                    <div class="table-cell highlight" style="justify-content: center;">
+                        我們（$0 計劃）
+                        <span class="badge">最抵</span>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                        <strong>公司註冊費</strong><br>
+                        <span style="font-size: 13px; color: var(--color-gray);">政府收費 $1,720</span>
+                    </div>
+                    <div class="table-cell" style="justify-content: center;">$1,720</div>
+                    <div class="table-cell" style="justify-content: center;">$1,720</div>
+                    <div class="table-cell highlight" style="justify-content: center;">
+                        <span class="check-icon">100% 回贈</span>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                        <strong>商業登記費</strong><br>
+                        <span style="font-size: 13px; color: var(--color-gray);">政府收費 $2,200</span>
+                    </div>
+                    <div class="table-cell" style="justify-content: center;">$2,200</div>
+                    <div class="table-cell" style="justify-content: center;">$2,200</div>
+                    <div class="table-cell highlight" style="justify-content: center;">
+                        <span class="check-icon">100% 回贈</span>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                        <strong>法定秘書服務</strong><br>
+                        <span style="font-size: 13px; color: var(--color-gray);">每年必須</span>
+                    </div>
+                    <div class="table-cell" style="justify-content: center;" class="x-icon">自行處理</div>
+                    <div class="table-cell" style="justify-content: center;">$2,000 - $5,000</div>
+                    <div class="table-cell highlight" style="justify-content: center;">包在套餐內</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                        <strong>註冊地址</strong><br>
+                        <span style="font-size: 13px; color: var(--color-gray);">每年必須</span>
+                    </div>
+                    <div class="table-cell" style="justify-content: center;" class="x-icon">自行處理</div>
+                    <div class="table-cell" style="justify-content: center;">$1,500 - $3,000</div>
+                    <div class="table-cell highlight" style="justify-content: center;">包在套餐內</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                        <strong>總啟動費用</strong>
+                    </div>
+                    <div class="table-cell" style="justify-content: center; font-weight: 700;">$3,920+</div>
+                    <div class="table-cell" style="justify-content: center; font-weight: 700;">$7,420+</div>
+                    <div class="table-cell highlight" style="justify-content: center; font-size: 20px;">
+                        $0 起
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== $5588 套餐 ===== -->
+    <section class="section plan-section" id="plan">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">人氣套餐</span>
+                <h2 class="section-title">$5,588 開公司套餐</h2>
+                <p class="section-desc">包政府收費，再送過萬元營運資源，最抵開公司之選</p>
+            </div>
+            <div class="plan-card">
+                <div class="plan-header">
+                    <div class="plan-name">全面創業套餐</div>
+                    <div class="plan-price">$5,588<small> / 次</small></div>
+                    <p class="plan-tagline">包開公司 + 過萬元禮遇，一步到位</p>
+                </div>
+                <div class="plan-body">
+                    <ul class="plan-list">
+                        <li>
+                            <span class="gift">包</span>
+                            <span>開公司全套服務（包政府收費）</span>
+                        </li>
+                        <li>
+                            <span class="gift">送</span>
+                            <span>小紅書推廣服務</span>
+                            <span class="value">價值 $4,688</span>
+                        </li>
+                        <li>
+                            <span class="gift">送</span>
+                            <span>網頁設計服務</span>
+                            <span class="value">價值 $3,888</span>
+                        </li>
+                        <li>
+                            <span class="gift">送</span>
+                            <span>勞工保險 88 折優惠</span>
+                            <span class="value">保證最抵</span>
+                        </li>
+                        <li>
+                            <span class="gift">送</span>
+                            <span>客戶關係管理系統（CRM）</span>
+                            <span class="value">永久使用</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="plan-cta">
+                    <a href="#contact" class="btn btn-primary btn-lg">立即預約套餐</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 客戶見證 ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">客戶評價</span>
+                <h2 class="section-title">過千位創業者的選擇</h2>
+                <p class="section-desc">真實客戶回饋，見證我們的專業服務</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        本來以為開公司好麻煩，估唔到由諮詢到銀行開戶全部有人跟，10日就搞掂。政府費用真係全數回贈，$0 開公司唔係講笑。
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">陳</div>
+                        <div class="author-info">
+                            <h4>陳先生</h4>
+                            <p>室內設計工作室創辦人</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        $5,588 套餐超抵，送咗網頁設計同小紅書推廣，等於我一開公司就有晒營運資源。客戶服務好快回覆，推薦！
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">李</div>
+                        <div class="author-info">
+                            <h4>李小姐</h4>
+                            <p>美容品牌創辦人</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        之前自己去銀行開戶被拒絕過兩次，經他們介紹一次過搞掂。會計核數都一併跟，慳返好多時間。
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">黃</div>
+                        <div class="author-info">
+                            <h4>黃先生</h4>
+                            <p>進出口貿易公司</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">常見問題</span>
+                <h2 class="section-title">你可能想知的問題</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        「政府費用 100% 回贈」是甚麼意思？
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            即係你開公司需要繳付的政府收費（包括公司註冊費 $1,720 同商業登記費 $2,200），我們會全數以現金或服務形式回贈給你。你實際需要畀的啟動費用為 $0。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        開公司需要什麼文件？
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            基本上需要：所有股東及董事的身份證或護照、地址證明（3個月內）、公司名稱（中英文均可）。我們會提供完整文件清單並協助準備。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        開公司需要幾耐？
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            公司註冊一般需要 5-7 個工作天。銀行開戶時間視乎個別銀行，一般 1-2 星期。整體由諮詢到拿到銀行戶口，大約 2-3 星期。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        我不是香港人可以開公司嗎？
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            可以。香港允許任何國籍人士成立有限公司，沒有居住要求。但銀行開戶時部份銀行可能要求親身到場，我們會協助安排。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        $5,588 套餐有沒有合約期？
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            套餐為一次性收費，沒有強制長約。送的小紅書推廣、網頁設計、CRM 系統均為永久使用或一次過交付。後續會計、秘書服務可按需選購。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 底部 CTA ===== -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>立即開始你的創業之路</h2>
+            <p>免費諮詢，專業顧問一對一跟進，協助你揀最適合的方案</p>
+            <a href="#" class="btn btn-primary btn-lg">WhatsApp 免費諮詢</a>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">$0 開公司</div>
+                    <p class="footer-desc">
+                        香港中小企一站式開公司服務，由註冊、會計到營運支援，陪你創業每一步。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>服務</h4>
+                    <ul>
+                        <li><a href="#">公司註冊</a></li>
+                        <li><a href="#">會計核數</a></li>
+                        <li><a href="#">銀行開戶</a></li>
+                        <li><a href="#">網頁設計</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>營運支援</h4>
+                    <ul>
+                        <li><a href="#">社交媒體營運</a></li>
+                        <li><a href="#">小紅書推廣</a></li>
+                        <li><a href="#">CRM 系統</a></li>
+                        <li><a href="#">中小企資助</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>聯絡</h4>
+                    <ul>
+                        <li><a href="#">WhatsApp 查詢</a></li>
+                        <li><a href="#">電郵</a></li>
+                        <li><a href="#">辦公室地址</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 $0 開公司. All rights reserved. 此網站只供參考，實際服務條款及費用以合約為準。
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== FAQ 摺疊 =====
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // 關閉所有
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                });
+                
+                // 如果原本唔係開啟狀態，就開啟當前
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // ===== Navbar 滾動效果 =====
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // ===== 平滑滾動 =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
