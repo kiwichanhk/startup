@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$0 開公司 | 政府費用 100% 回贈 | 香港中小企一站式服務</title>
-    <meta name="description" content="香港開公司 $0 啟動，政府費用 100% 回贈。包會計核數、銀行開戶、社交媒體營運、小紅書推廣、CRM系統、網頁設計一站式服務。">
+    <title>$0 開公司 | 政府費用 最高100% 回贈 | 香港中小企一站式服務</title>
+    <meta name="description" content="香港開公司 $0 啟動，政府費用 最高100% 回贈。包會計核數、銀行開戶、社交媒體營運、小紅書推廣、CRM系統、網頁設計一站式服務。">
     <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap">
     <style>
         /* ===== 重置與基礎 ===== */
@@ -242,7 +242,7 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
 
@@ -276,6 +276,46 @@
         .feature-text p {
             font-size: 13px;
             color: var(--color-gray);
+        }
+
+        /* ===== 右下角浮動按鈕 ===== */
+        .float-buttons {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 999;
+        }
+
+        .float-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 24px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.2s;
+        }
+
+        .float-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+
+        .float-btn.primary {
+            background: var(--color-accent);
+            color: white;
+        }
+
+        .float-btn.secondary {
+            background: white;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
         }
 
         /* ===== 區塊通用 ===== */
@@ -535,6 +575,16 @@
 
         .plan-list .gift {
             color: var(--color-accent);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .plan-list .plan-sub-list {
+            padding-left: 36px;
+        }
+
+        .plan-list .plan-sub-list .num {
+            color: var(--color-primary);
             font-weight: 700;
             flex-shrink: 0;
         }
@@ -808,11 +858,58 @@
             .footer-grid {
                 grid-template-columns: 1fr;
             }
+            /* 費用比較表：手機卡片式佈局 */
+            .pricing-table {
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                overflow: visible;
+            }
+            .table-header {
+                display: none;
+            }
             .table-row {
                 grid-template-columns: 1fr;
+                background: white;
+                border-radius: 14px;
+                margin-bottom: 16px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+                border: 1px solid var(--color-border);
+                overflow: hidden;
+            }
+            .table-cell {
+                justify-content: space-between;
+                padding: 14px 20px;
+                border-bottom: 1px solid var(--color-border);
+                font-size: 14px;
+            }
+            .table-cell:last-child {
+                border-bottom: none;
             }
             .table-cell:first-child {
+                background: var(--color-gray-light);
+                font-weight: 700;
                 grid-column: auto;
+            }
+            /* 手機版加返選項標籤 */
+            .table-cell:nth-child(2)::before {
+                content: "自行辦理";
+                font-size: 13px;
+                color: var(--color-gray);
+            }
+            .table-cell:nth-child(3)::before {
+                content: "一般代理";
+                font-size: 13px;
+                color: var(--color-gray);
+            }
+            .table-cell:nth-child(4)::before {
+                content: "我們（$0計劃）";
+                font-size: 13px;
+                color: var(--color-success);
+                font-weight: 600;
+            }
+            .table-cell.highlight {
+                background: var(--color-success-light);
             }
         }
     </style>
@@ -845,7 +942,7 @@
                 香港中小企首選開公司服務
             </div>
             <h1><span class="zero">$0</span> 開公司</h1>
-            <p class="hero-subtitle">政府費用 100% 回贈</p>
+            <p class="hero-subtitle">政府費用 最高100% 回贈</p>
             <p class="hero-desc">
                 由諮詢、註冊、銀行開戶到營運支援，一站式幫你搞掂所有開公司程序。
                 政府收費全數回贈，真正 $0 起步創業。
@@ -862,21 +959,12 @@
         <div class="container">
             <div class="features-grid">
                 <div class="feature-item">
-                    <div class="feature-icon blue">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    </div>
-                    <div class="feature-text">
-                        <h4>$0 開公司</h4>
-                        <p>免啟動費用</p>
-                    </div>
-                </div>
-                <div class="feature-item">
                     <div class="feature-icon green">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                     </div>
                     <div class="feature-text">
-                        <h4>政府費用全回贈</h4>
-                        <p>100% 現金回贈</p>
+                        <h4>政府費用回贈</h4>
+                        <p>按行業，最高100% 回贈</p>
                     </div>
                 </div>
                 <div class="feature-item">
@@ -897,6 +985,24 @@
                         <p>會計師及顧問駐場</p>
                     </div>
                 </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="background: #CFFAFE; color: #0891B2;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                    </div>
+                    <div class="feature-text">
+                        <h4>最快一天開立收款戶口</h4>
+                        <p>即日開通，快速收錢</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="background: #FCE7F3; color: #DB2777;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <div class="feature-text">
+                        <h4>全程專人跟進</h4>
+                        <p>一對一顧問，隨時回覆</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -906,7 +1012,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">我們的服務</span>
-                <h2 class="section-title">由開公司到做生意，全部搞掂</h2>
+                <h2 class="section-title">你專心做生意，瑣碎事交俾我哋</h2>
                 <p class="section-desc">7 大核心服務，覆蓋中小企由成立到成長嘅每一步</p>
             </div>
             <div class="services-grid">
@@ -915,7 +1021,7 @@
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M9 13h1M9 17h1M14 9h1M14 13h1M14 17h1"/></svg>
                     </div>
                     <h3>中小企發展支援</h3>
-                    <p>申請政府資助、營銷策略、業務顧問，陪你由零開始成長</p>
+                    <p>幫助申請政府各項資助、營銷策略、業務顧問，陪你由零開始成長</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon" style="background: var(--color-success-light); color: var(--color-success);">
@@ -928,7 +1034,7 @@
                     <div class="service-icon" style="background: var(--color-accent-light); color: var(--color-accent);">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
                     </div>
-                    <h3>申請銀行帳戶</h3>
+                    <h3>特快申請收款户口</h3>
                     <p>協助開設商業銀行戶口，提升開戶成功率</p>
                 </div>
                 <div class="service-card">
@@ -943,7 +1049,7 @@
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                     </div>
                     <h3>小紅書推廣</h3>
-                    <p>內地短視頻及小紅書營銷，接觸大灣區客源</p>
+                    <p>大量網紅博主資源，助你快速打通大灣區客源，提升品牌知名度</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon" style="background: #FEF3C7; color: #D97706;">
@@ -1002,7 +1108,7 @@
             <div class="section-header">
                 <span class="section-tag">費用比較</span>
                 <h2 class="section-title">點解選擇我們？</h2>
-                <p class="section-desc">一目了然，政府費用 100% 回贈，真正 $0 開公司</p>
+                <p class="section-desc">一目了然，政府費用 最高100% 回贈，真正 $0 開公司</p>
             </div>
             <div class="pricing-table">
                 <div class="table-row table-header">
@@ -1022,7 +1128,7 @@
                     <div class="table-cell" style="justify-content: center;">$1,720</div>
                     <div class="table-cell" style="justify-content: center;">$1,720</div>
                     <div class="table-cell highlight" style="justify-content: center;">
-                        <span class="check-icon">100% 回贈</span>
+                        <span class="check-icon">最高100% 回贈</span>
                     </div>
                 </div>
                 <div class="table-row">
@@ -1033,7 +1139,7 @@
                     <div class="table-cell" style="justify-content: center;">$2,200</div>
                     <div class="table-cell" style="justify-content: center;">$2,200</div>
                     <div class="table-cell highlight" style="justify-content: center;">
-                        <span class="check-icon">100% 回贈</span>
+                        <span class="check-icon">最高100% 回贈</span>
                     </div>
                 </div>
                 <div class="table-row">
@@ -1068,18 +1174,18 @@
         </div>
     </section>
 
-    <!-- ===== $5588 套餐 ===== -->
+    <!-- ===== $4688 套餐 ===== -->
     <section class="section plan-section" id="plan">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">人氣套餐</span>
-                <h2 class="section-title">$5,588 開公司套餐</h2>
+                <h2 class="section-title">$4,688 開公司套餐</h2>
                 <p class="section-desc">包政府收費，再送過萬元營運資源，最抵開公司之選</p>
             </div>
             <div class="plan-card">
                 <div class="plan-header">
                     <div class="plan-name">全面創業套餐</div>
-                    <div class="plan-price">$5,588<small> / 次</small></div>
+                    <div class="plan-price">$4,688<small> / 次</small></div>
                     <p class="plan-tagline">包開公司 + 過萬元禮遇，一步到位</p>
                 </div>
                 <div class="plan-body">
@@ -1090,23 +1196,26 @@
                         </li>
                         <li>
                             <span class="gift">送</span>
-                            <span>小紅書推廣服務</span>
-                            <span class="value">價值 $4,688</span>
+                            <span>勞工保險 88 折優惠</span>
                         </li>
                         <li>
-                            <span class="gift">送</span>
+                            <span class="gift">再送以下 3 選 1</span>
+                            <span class="value"></span>
+                        </li>
+                        <li class="plan-sub-list">
+                            <span class="num">1.</span>
                             <span>網頁設計服務</span>
                             <span class="value">價值 $3,888</span>
                         </li>
-                        <li>
-                            <span class="gift">送</span>
-                            <span>勞工保險 88 折優惠</span>
-                            <span class="value">保證最抵</span>
+                        <li class="plan-sub-list">
+                            <span class="num">2.</span>
+                            <span>小紅書推廣服務</span>
+                            <span class="value">價值 $4,688</span>
                         </li>
-                        <li>
-                            <span class="gift">送</span>
+                        <li class="plan-sub-list">
+                            <span class="num">3.</span>
                             <span>客戶關係管理系統（CRM）</span>
-                            <span class="value">永久使用</span>
+                            <span class="value">價值 $3,888</span>
                         </li>
                     </ul>
                 </div>
@@ -1142,7 +1251,7 @@
                 <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">
-                        $5,588 套餐超抵，送咗網頁設計同小紅書推廣，等於我一開公司就有晒營運資源。客戶服務好快回覆，推薦！
+                        $4,688 套餐超抵，送咗網頁設計同小紅書推廣，等於我一開公司就有晒營運資源。客戶服務好快回覆，推薦！
                     </p>
                     <div class="testimonial-author">
                         <div class="author-avatar">李</div>
@@ -1179,7 +1288,7 @@
             <div class="faq-list">
                 <div class="faq-item">
                     <div class="faq-question">
-                        「政府費用 100% 回贈」是甚麼意思？
+                        「政府費用 最高100% 回贈」是甚麼意思？
                         <span class="arrow">▼</span>
                     </div>
                     <div class="faq-answer">
@@ -1223,7 +1332,7 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        $5,588 套餐有沒有合約期？
+                        $4,688 套餐有沒有合約期？
                         <span class="arrow">▼</span>
                     </div>
                     <div class="faq-answer">
@@ -1287,6 +1396,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- ===== 右下角浮動按鈕 ===== -->
+    <div class="float-buttons">
+        <a href="#contact" class="float-btn primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            立即查詢
+        </a>
+        <a href="#plan" class="float-btn secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            選擇計劃
+        </a>
+    </div>
 
     <script>
         // ===== FAQ 摺疊 =====
